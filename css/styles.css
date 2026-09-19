@@ -1,19 +1,133 @@
-/* Estilos generales */
+/* ------------------------------ || GENERAL || ---------- */
+/*    Estilos que no se cambian con el tema    */
 
-/* Navegación */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Landing */
+body {
+  line-height: 1.8;
+}
 
-/* Juego de cartas */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
 
-/* Juego de dados */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+}
 
-/* Juego de preguntas */
+header img {
+  width: 30%;
+  transition: transform 0.3s;
+}
 
-/* Puntajes */
+header img:hover,
+footer img:hover {
+  transform: scale(1.2);
+}
 
-/* Sobre nosotros */
+nav {
+  display: flex;
+  justify-content: center;
+}
 
-/* Tema neon */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-/* Tema flash */
+nav li {
+  overflow: hidden;
+  padding: 0;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem;
+  width: 10rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+nav span {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+nav img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 5rem;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+nav a:hover,
+nav a:hover img {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  margin: 1rem 2rem;
+}
+
+.main-contenido {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 1.5rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 1rem;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+
+footer img {
+  width: 15%;
+  transition: transform 0.3s;
+}
+
+/* ------------------------------ || TEMA ARCADE || ---------- */
+
+/* ------------------------------ || TEMA FLASH || ---------- */
