@@ -1,4 +1,4 @@
-/* ------------------------------ || GENERAL || ---------- */
+/* ------------------------------------------------------------ || GENERAL || ---------- */
 /*    Estilos que no se cambian con el tema    */
 
 * {
@@ -20,7 +20,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 3rem;
+  padding: 1rem 3rem;
 }
 
 header img {
@@ -29,8 +29,17 @@ header img {
 }
 
 header img:hover,
-footer img:hover {
+nav a:hover img,
+footer img:hover,
+footer h3:hover,
+footer p:hover {
   transform: scale(1.2);
+}
+
+header .boton-tema {
+  height: fit-content;
+  padding: 0.5rem;
+  border-radius: 30px;
 }
 
 nav {
@@ -60,6 +69,7 @@ nav a {
   width: 10rem;
   text-decoration: none;
   transition: transform 0.3s;
+  text-transform: uppercase;
 }
 
 nav span {
@@ -67,10 +77,10 @@ nav span {
   z-index: 2;
   width: 100%;
   padding: 0.5rem 1rem;
-  text-transform: capitalize;
   text-align: center;
   font-weight: bold;
   border-radius: 10px;
+  font-size: 20px;
 }
 
 nav img {
@@ -82,16 +92,11 @@ nav img {
   transition: transform 0.3s;
 }
 
-nav a:hover,
-nav a:hover img {
-  transform: scale(1.1);
-}
-
 main {
   display: flex;
   justify-content: space-between;
   border-radius: 7px;
-  margin: 1rem 2rem;
+  margin: 2rem 3rem;
 }
 
 .main-contenido {
@@ -123,11 +128,84 @@ footer {
   padding: 3rem;
 }
 
+h3,
+footer p {
+  text-transform: uppercase;
+  transition: transform 0.3s;
+}
+
 footer img {
   width: 15%;
   transition: transform 0.3s;
 }
 
-/* ------------------------------ || TEMA ARCADE || ---------- */
+/* ------------------------------------------------------------ || TEMA ARCADE || ---------- 
+C #22D3EE
+M #FF2BD6
+Y #FDE047
+P #8B5CF6
+
+FNT #F3F4F6 #A7B0C0
+*/
+
+.tema-arcade {
+  background: linear-gradient(135deg, #0b1020 0%, #24103f 50%, #092c3a 100%);
+  background-color: #080b16;
+  color: #f3f4f6;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.tema-arcade .main-contenido,
+.tema-arcade aside {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 43, 214, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #0b1020, #171033, #0d2435);
+  border: 3px solid #f3f4f6;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow:
+    0 0 0.2rem #f3f4f6,
+    0 0 0.2rem #ff2bd6,
+    0 0 2rem #ff2bd6,
+    0 0 0.8rem #8b5cf6,
+    0 0 2.8rem #8b5cf6,
+    inset 0 0 1.3rem #8b5cf6;
+}
+
+.tema-arcade nav span {
+  background: #111827;
+  color: #f3f4f6;
+  border: 2px solid #f3f4f6;
+  border-radius: 30px;
+  padding: 0.5rem;
+  box-shadow:
+    0 0 0.2rem #f3f4f6,
+    0 0 0.2rem #ff2bd6,
+    0 0 0.5rem #8b5cf6,
+    inset 0 0 1rem #8b5cf6;
+}
+
+.tema-arcade h1,
+.tema-arcade h2,
+.tema-arcade h3 {
+  color: #f3f4f6;
+  text-shadow:
+    0 0 7px #f3f4f6,
+    0 0 10px #8b5cf6,
+    0 0 21px #8b5cf6;
+}
+
+.tema-arcade footer::before {
+  backdrop-filter: blur(12px);
+}
 
 /* ------------------------------ || TEMA FLASH || ---------- */
