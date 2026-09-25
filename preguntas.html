@@ -11,22 +11,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>ARRIESGATE - NOSTALGIA</title>
   </head>
   <body class="tema-arcade">
     <div class="container">
       <header>
         <a href="index.html">
-          <img src="img/logo.png" alt="Logo Projecto" />
+          <img
+            src="img/arcade/logo-arcade.png"
+            alt="Logo Nostalgia"
+            id="logo"
+          />
         </a>
-        <button type="button">Tema: Arcade</button>
+        <button type="button" class="btn-temaflash">Flash</button>
       </header>
 
       <nav>
         <ul>
           <li>
             <a href="index.html">
-              <img src="img/inicio.png" alt="Inicio" />
+              <img src="img/arcade/inicio-arcade.png" alt="Icono Inicio" />
               <span>Inicio</span>
             </a>
           </li>
@@ -44,53 +48,139 @@
           </li>
           <li>
             <a href="preguntas.html">
-              <img src="img/preguntas.png" alt="Preguntas" />
-              <span>Preguntas</span>
+              <img
+                src="img/arcade/arriesgate-arcade.png"
+                alt="Icono Juego Arriesgate"
+              />
+              <span>Arriesgate</span>
             </a>
           </li>
           <li>
             <a href="puntaje.html">
-              <img src="img/puntajes.png" alt="Puntajes" />
+              <img
+                src="img/arcade/tablero-arcade.png"
+                alt="Icono Tablero de Puntajes"
+              />
               <span>Puntajes</span>
             </a>
           </li>
           <li>
             <a href="nosotros.html">
-              <img src="img/nosotros.png" alt="Nosotros" />
-              <span>Nosotros</span>
-            </a>
+              <img
+                src="img/arcade/nosotros-arcade.png"
+                alt="Icono Sobre Nosotros"
+              />
+              <span>Nosotros</span></a
+            >
           </li>
         </ul>
       </nav>
 
       <main>
-        <div class="main-contenido"></div>
-        <aside>
+        <div class="main-contenido">
+          <!-- CONFIGURACIÓN -->
+          <h1 id="preguntas-titulo">Preguntas</h1>
+          <section id="preguntas-configuracion">
+            <h4>Elegí un modo de juego:</h4>
+            <button type="button" id="btn-clasico">Clásico</button>
+            <button type="button" id="btn-contrarreloj">Contrarreloj</button>
+            <button type="button" id="btn-instrucciones">Cómo jugar</button>
+            <button type="button" id="btn-creditos">Créditos</button>
+            <p id="mensaje"></p>
+          </section>
+
+          <!-- CÓMO JUGAR -->
+          <section id="preguntas-info" class="oculto">
+            <h2>Cómo jugar:</h2>
+            <p><span class="preguntas-modos">Clásico:</span></p>
+            <p><span class="preguntas-modos">Contrarreloj:</span></p>
+            <p><span class="preguntas-modos">Riesgo:</span></p>
+            <button type="button" id="btn-inicio">Volver</button>
+          </section>
+
+          <!-- MODO CLÁSICO -->
+
+          <section id="clasico-config" class="oculto">
+            <h2>Modo Clásico</h2>
+            <p>Elegí una categoría:</p>
+            <button type="button" id="btn-random">Aleatorio</button>
+            <button type="button" id="btn-animals">Animales</button>
+            <button type="button" id="btn-science">Ciencia</button>
+            <button type="button" id="btn-history">Historia</button>
+            <button type="button" id="btn-art">Arte</button>
+            <button type="button" id="btn-geography">Geografía</button>
+            <button type="button" id="btn-comenzarClasico">Comenzar</button>
+          </section>
+
+          <!-- ÁREA DE JUEGO -->
+
+          <section id="preguntas-juego" class="oculto">
+            <div id="info-partida">
+              <p id="vidas">Vidas: -</p>
+              <p id="nro-pregunta">Pregunta: -</p>
+              <p id="racha">Racha: 0</p>
+              <p id="modo-actual">Modo: -</p>
+              <p id="tipo-categoría">Random</p>
+              <button type="button" id="btn-pausa">||</button>
+              <p id="tiempo-partida">Tiempo: -</p>
+              <p id="puntos">Puntos: 0</p>
+            </div>
+            <div id="pregunta-container">
+              <h2 class="pregunta"></h2>
+              <div class="opciones"></div>
+            </div>
+            <div id="respuestas"></div>
+            <div id="resultado"><p id="msj-resultado"></p></div>
+          </section>
+
+          <section id="preguntas-fin" class="oculto">
+            <h2>Fin de la partida</h2>
+            <p id="resultado-final"></p>
+            <p id="puntaje-final"></p>
+            <button type="button" id="btn-nueva"></button>
+            <button type="button" id="btn-finalizar">FINALIZAR</button>
+            <button type="button" id="btn-riesgo">ARRIESGAR</button>
+            <button type="button" id="btn-juegos">MÁS JUEGOS</button>
+          </section>
+
+          <section id="preguntas-pausa" class="oculto">
+            <p>CATEGORIA</p>
+            <p>SCORE</p>
+            <p>APUESTA</p>
+            <button type="button" id="btn-seguir">SEGUIR</button>
+            <button type="button" id="btn-abandonar">ABANDONAR</button>
+          </section>
+        </div>
+
+        <aside id="main-tablero">
           <h2>TABLA DE PUNTAJES</h2>
-          <div></div>
-          <p>Ver todos (te lleva al html de puntajes)</p>
-          <p>mejor puntaje</p>
-          <p>juego mas jugado</p>
-          <p>ultima partida</p>
+          <hr />
+          <a href="puntaje.html" class="boton btn-temaarcade">VER TODOS</a>
+          <div id="mayor-puntaje">
+            <!--MUESTRA EL MAYOR PUNTAJE + EL ICONO-->
+          </div>
+          <div id="cant-partidas">
+            <!--MUESTRA EL ICONO DEL JUEGO CON MAYOR CANTIDAD DE PARTIDAS JUGADAS Y PUNTAJE ENTRE PARENTESIS-->
+          </div>
         </aside>
       </main>
 
       <footer>
-        <img src="img/monograma.png" alt="Monograma" />
-        <div>
-          <p>INTEGRANTES:</p>
-          <p>Ángel León Cabral</p>
+        <img
+          src="img/arcade/monograma-arcade.png"
+          alt="Monograma Nostalgia"
+          id="monograma"
+        />
+        <div id="footer-integrantes">
+          <h3>INTEGRANTES:</h3>
           <p>Ignacio Verasay Prego</p>
+          <a href="https://github.com/AngelLeonSalvador">Ángel León Cabral</a>
         </div>
-        <div>
-          <p>TEMAS:</p>
-          <p>Arcade</p>
-          <p>Flash</p>
-        </div>
-        <div>
-          <p>JUEGOS:</p>
-          <p>Cartas</p>
-          <p>Dados</p>
+        <div id="footer-juegos">
+          <h3>JUEGOS:</h3>
+          <a href="cartas.html">Cartas</a>
+          <a href="dados.html">Dados</a>
+          <a href="preguntas.html">Arriesgate</a>
         </div>
       </footer>
     </div>

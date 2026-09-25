@@ -11,22 +11,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>CARTAS - NOSTALGIA</title>
   </head>
   <body class="tema-arcade">
     <div class="container">
       <header>
         <a href="index.html">
-          <img src="img/logo.png" alt="Logo Projecto" />
+          <img
+            src="img/arcade/logo-arcade.png"
+            alt="Logo Nostalgia"
+            id="logo"
+          />
         </a>
-        <button type="button">Tema: Arcade</button>
+        <button type="button" class="btn-temaflash">Flash</button>
       </header>
 
       <nav>
         <ul>
           <li>
             <a href="index.html">
-              <img src="img/inicio.png" alt="Inicio" />
+              <img src="img/arcade/inicio-arcade.png" alt="Icono Inicio" />
               <span>Inicio</span>
             </a>
           </li>
@@ -44,21 +48,30 @@
           </li>
           <li>
             <a href="preguntas.html">
-              <img src="img/preguntas.png" alt="Preguntas" />
-              <span>Preguntas</span>
+              <img
+                src="img/arcade/arriesgate-arcade.png"
+                alt="Icono Juego Arriesgate"
+              />
+              <span>Arriesgate</span>
             </a>
           </li>
           <li>
             <a href="puntaje.html">
-              <img src="img/puntajes.png" alt="Puntajes" />
+              <img
+                src="img/arcade/tablero-arcade.png"
+                alt="Icono Tablero de Puntajes"
+              />
               <span>Puntajes</span>
             </a>
           </li>
           <li>
             <a href="nosotros.html">
-              <img src="img/nosotros.png" alt="Nosotros" />
-              <span>Nosotros</span>
-            </a>
+              <img
+                src="img/arcade/nosotros-arcade.png"
+                alt="Icono Sobre Nosotros"
+              />
+              <span>Nosotros</span></a
+            >
           </li>
         </ul>
       </nav>
@@ -66,32 +79,35 @@
       <main>
         <div class="main-contenido"></div>
 
-        <aside>
+        <aside id="main-tablero">
           <h2>TABLA DE PUNTAJES</h2>
-          <div></div>
-          <p>Ver todos (te lleva al html de puntajes)</p>
-          <p>mejor puntaje</p>
-          <p>juego mas jugado</p>
-          <p>ultima partida</p>
+          <hr />
+          <a href="puntaje.html" class="boton btn-temaarcade">VER TODOS</a>
+          <div id="mayor-puntaje">
+            <!--MUESTRA EL MAYOR PUNTAJE + EL ICONO-->
+          </div>
+          <div id="cant-partidas">
+            <!--MUESTRA EL ICONO DEL JUEGO CON MAYOR CANTIDAD DE PARTIDAS JUGADAS Y PUNTAJE ENTRE PARENTESIS-->
+          </div>
         </aside>
       </main>
 
       <footer>
-        <img src="img/monograma.png" alt="Monograma" />
-        <div>
-          <p>INTEGRANTES:</p>
-          <p>Ángel León Cabral</p>
+        <img
+          src="img/arcade/monograma-arcade.png"
+          alt="Monograma Nostalgia"
+          id="monograma"
+        />
+        <div id="footer-integrantes">
+          <h3>INTEGRANTES:</h3>
           <p>Ignacio Verasay Prego</p>
+          <a href="https://github.com/AngelLeonSalvador">Ángel León Cabral</a>
         </div>
-        <div>
-          <p>TEMAS:</p>
-          <p>Arcade</p>
-          <p>Flash</p>
-        </div>
-        <div>
-          <p>JUEGOS:</p>
-          <p>Cartas</p>
-          <p>Dados</p>
+        <div id="footer-juegos">
+          <h3>JUEGOS:</h3>
+          <a href="cartas.html">Cartas</a>
+          <a href="dados.html">Dados</a>
+          <a href="preguntas.html">Arriesgate</a>
         </div>
       </footer>
     </div>

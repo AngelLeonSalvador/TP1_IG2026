@@ -11,22 +11,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>INICIO - NOSTALGIA</title>
   </head>
   <body class="tema-arcade">
     <div class="container">
       <header>
         <a href="index.html">
-          <img src="img/logo.png" alt="Logo Projecto" />
+          <img
+            src="img/arcade/logo-arcade.png"
+            alt="Logo Nostalgia"
+            id="logo"
+          />
         </a>
-        <button type="button" class="boton-tema">Flash</button>
+        <button type="button" class="btn-temaflash">Flash</button>
       </header>
 
       <nav>
         <ul>
           <li>
             <a href="index.html">
-              <img src="img/inicio.png" alt="Inicio" />
+              <img src="img/arcade/inicio-arcade.png" alt="Icono Inicio" />
               <span>Inicio</span>
             </a>
           </li>
@@ -44,19 +48,28 @@
           </li>
           <li>
             <a href="preguntas.html">
-              <img src="img/preguntas.png" alt="Preguntas" />
-              <span>Preguntas</span>
+              <img
+                src="img/arcade/arriesgate-arcade.png"
+                alt="Icono Juego Arriesgate"
+              />
+              <span>Arriesgate</span>
             </a>
           </li>
           <li>
             <a href="puntaje.html">
-              <img src="img/puntajes.png" alt="Puntajes" />
+              <img
+                src="img/arcade/tablero-arcade.png"
+                alt="Icono Tablero de Puntajes"
+              />
               <span>Puntajes</span>
             </a>
           </li>
           <li>
             <a href="nosotros.html">
-              <img src="img/nosotros.png" alt="Nosotros" />
+              <img
+                src="img/arcade/nosotros-arcade.png"
+                alt="Icono Sobre Nosotros"
+              />
               <span>Nosotros</span></a
             >
           </li>
@@ -65,57 +78,118 @@
 
       <main>
         <div class="main-contenido">
-          <section>
-            <h1>BIENVENIDXS</h1>
-            <p>Frase o dicho</p>
-            <p>Presentación del sitio</p>
-            <button type="button">TEMA ARCADE</button>
-            <button type="button">TEMA FLASH</button>
+          <h1 id="bienvenida">BIENVENIDXS</h1>
+          <span id="btns-bienv">
+            <button type="button" class="boton btn-temaarcade">
+              TEMA ARCADE
+            </button>
+            <button type="button" class="boton btn-temaflash">
+              TEMA FLASH
+            </button>
+          </span>
+          <section id="main-inicio">
+            <p id="bienv-frase">
+              Elegí un juego y poné a prueba tus habilidades
+            </p>
+            <section id="bienv-intro">
+              <p style="text-align: center">
+                <strong>Gracias por ver nuestra colección de juegos!</strong>
+              </p>
+              <p>
+                Creamos una selección de juegos simples y entretenidos para
+                disfrutar desde tu navegador. Explorá nuestra colección, elegí
+                el juego que más te guste y poné a prueba tus habilidades.
+              </p>
+              <br />
+              <p>
+                Combinamos una interfaz sencilla e intuitiva con una estética
+                inspirada en los videojuegos clásicos, buscando que la
+                experiencia sea fácil de entender y divertida.
+              </p>
+            </section>
           </section>
 
           <hr />
 
-          <section>
-            <p>explicacion de la coleccion de juegos</p>
-            <div>[HACER TARJETAS ACÁ]</div>
-            <button type="button">JUEGO RANDOM</button>
+          <section id="bienv-juegos">
+            <p>
+              Nuestra colección reúne diferentes propuestas con mecánicas y
+              desafíos variados en donde cada juego propone una forma diferente
+              de ponerse a prueba: algunos van a testear tu rapidez, otros tu
+              memoria, lógica o capacidad para tomar decisiones.
+            </p>
+            <p>¡Algunos incluso pondrán a prueba tu suerte!</p>
+            <br />
+            <p class="bienv-corona">
+              👑 Elegí un juego, aprendé sus reglas y tratá de conseguir el
+              mejor resultado 👑
+            </p>
+            <section id="bienv-seccionjuegos">
+              <a href="cartas.html" class="bienv-tarjetas">
+                <img src="img/cartas.png" alt="Icono Juego Cartas" />
+                <h3>CARTAS</h3>
+              </a>
+
+              <a href="dados.html" class="bienv-tarjetas">
+                <img src="img/dados.png" alt="Icono Juego Dados" />
+                <h3>DADOS</h3>
+              </a>
+
+              <a href="preguntas.html" class="bienv-tarjetas">
+                <img
+                  src="img/arcade/arriesgate-arcade.png"
+                  alt="Icono Juego Arriesgate"
+                />
+                <h3>ARRIESGATE</h3>
+              </a>
+            </section>
+            <button type="button" class="boton btn-temaarcade">
+              JUEGO RANDOM
+            </button>
           </section>
 
           <hr />
 
-          <section>
-            <p>ACCESOS RAPIDOS</p>
-            <button type="button">Puntajes</button>
-            <button type="button">Conocer al Equipo</button>
+          <section id="bienv-accesos">
+            <h2>ACCESOS RAPIDOS</h2>
+            <div class="btns-accesos">
+              <a href="puntaje.html" class="boton btn-temaarcade">PUNTAJE</a>
+              <a href="nosotros.html" class="boton btn-temaarcade"
+                >CONOCER AL EQUIPO</a
+              >
+            </div>
           </section>
         </div>
 
-        <aside>
+        <aside id="main-tablero">
           <h2>TABLA DE PUNTAJES</h2>
-          <div></div>
-          <p>Ver todos (te lleva al html de puntajes)</p>
-          <p>mejor puntaje</p>
-          <p>juego mas jugado</p>
-          <p>ultima partida</p>
+          <hr />
+          <a href="puntaje.html" class="boton btn-temaarcade">VER TODOS</a>
+          <div id="mayor-puntaje">
+            <!--MUESTRA EL MAYOR PUNTAJE + EL ICONO-->
+          </div>
+          <div id="cant-partidas">
+            <!--MUESTRA EL ICONO DEL JUEGO CON MAYOR CANTIDAD DE PARTIDAS JUGADAS Y PUNTAJE ENTRE PARENTESIS-->
+          </div>
         </aside>
       </main>
 
       <footer>
-        <img src="img/monograma.png" alt="Monograma" />
-        <div>
+        <img
+          src="img/arcade/monograma-arcade.png"
+          alt="Monograma Nostalgia"
+          id="monograma"
+        />
+        <div id="footer-integrantes">
           <h3>INTEGRANTES:</h3>
-          <p>Ángel León Cabral</p>
           <p>Ignacio Verasay Prego</p>
+          <a href="https://github.com/AngelLeonSalvador">Ángel León Cabral</a>
         </div>
-        <div>
-          <h3>TEMAS:</h3>
-          <p>Arcade</p>
-          <p>Flash</p>
-        </div>
-        <div>
+        <div id="footer-juegos">
           <h3>JUEGOS:</h3>
-          <p>Cartas</p>
-          <p>Dados</p>
+          <a href="cartas.html">Cartas</a>
+          <a href="dados.html">Dados</a>
+          <a href="preguntas.html">Arriesgate</a>
         </div>
       </footer>
     </div>
